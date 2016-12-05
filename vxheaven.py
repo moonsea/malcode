@@ -15,28 +15,22 @@ def WriteRes(malName, malTitle, malDesc, malAuthor, malDate, malSrc):
     if not os.path.exists('malcode'):
         os.makedirs('malcode')
 
-    malTitle = malTitle.replace('<em>', '').replace('</em>', '').replace('<strong>', '').replace('</strong>', '')
-    malDesc = malDesc.replace('<em>', '').replace('</em>', '').replace('<strong>', '').replace('</strong>', '')
-    malAuthor = malAuthor.replace('<em>', '').replace('</em>', '').replace('<strong>', '').replace('</strong>', '')
-    malDate = malDate.replace('<em>', '').replace('</em>', '').replace('<strong>', '').replace('</strong>', '')
+    malTitle = malTitle.replace('<em>', '').replace(
+        '</em>', '').replace('<strong>', '').replace('</strong>', '')
+    malDesc = malDesc.replace('<em>', '').replace(
+        '</em>', '').replace('<strong>', '').replace('</strong>', '')
+    malAuthor = malAuthor.replace('<em>', '').replace(
+        '</em>', '').replace('<strong>', '').replace('</strong>', '')
+    malDate = malDate.replace('<em>', '').replace(
+        '</em>', '').replace('<strong>', '').replace('</strong>', '')
 
-    content = '\n'.join([malName, malTitle, malDesc, malAuthor, malDate, malSrc])
+    content = '\n'.join([malName, malTitle, malDesc,
+                         malAuthor, malDate, malSrc])
 
     file_path = os.path.join('malcode', malName)
 
     with codecs.open(file_path, 'w', 'utf-8') as file:
         file.write(content)
-    # file = codecs.open(file_path, 'a+', 'utf-8')
-    # file.write(content + '\n')
-    # file.close
-
-'''
-def PrintRes(news_id, news_title, news_link, news_desc=''):
-    print '[+]', news_id, news_title
-    print '[+]', news_link
-    print '[+]', news_desc
-    print ''
-'''
 
 
 def GetPage(url):
@@ -100,7 +94,6 @@ def GetMalInfo(url):
 
 def GetMalcode(url):
     soup = GetPage(url)
-    # print soup
 
     results = soup.findAll('a', {'href': re.compile(r'/src.php\?info=(.+)')})
     for result in results:
@@ -108,22 +101,6 @@ def GetMalcode(url):
         src_url = ''.join(['http://vxheaven.org', tmp])
         GetMalInfo(src_url)
 
-        # print tmp
-    '''
-        news_id = result.get('id')
-        tmp_a = result.find('a')
-        news_title = tmp_a.renderContents()
-        news_link = str(tmp_a.get('href'))
-        tmp_p = result.find("div").renderContents()
-        # print tmp_p
-        match = re.search(r'(</p>.+<span)', tmp_p)
-        tmp_desc = match.group()
-        news_desc = tmp_desc[4:-5]
-        # news_desc = result.find("div", {"class": "c-summary"}).renderContents()
-        # WriteRes(news_id, news_title, news_link, news_desc, year)
-        # PrintRes(news_id, news_title, news_link, news_desc)
-    # return len(results)
-    '''
 
 if __name__ == '__main__':
     baseurl = "http://vxheaven.org/src.php?show=all"

@@ -90,3 +90,7 @@ ENV/
 
 # resource
 resource
+
+# ida pro file
+*.asm
+*.idb
