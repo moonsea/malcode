@@ -3,7 +3,6 @@
 import os
 import threading
 
-# idal -c -A -S//usr//local//src//ida-pro-6.4//idc//analysis_fullname.idc inputfile
 idalPath = "//usr//local//src//ida-pro-6.4//idal"
 idcPath = "//usr//local//src//ida-pro-6.4//idc//analysis_fullname.idc"
 PATH = './/resource//vxheaven//class//virus.win//compress//compress/'
@@ -55,7 +54,14 @@ def traveseFile(path):
     for parent, dirnames, filenames in os.walk(path):
 
         for filename in filenames:
+            parenttype = parent.split('/')[-1]
+
+            if(parenttype != 'fail'):
+                continue
+
             filepath = os.path.join(parent, filename)
+            print parent
+
 
             if (cleanFile(filename, filepath)):
                 continue
@@ -87,11 +93,7 @@ def cleanFile(filename, filepath):
         print '[-] Clean ', filename
         return True
 
-    # if (filetype == 'dump'):
-    #     return False
-
-    # return False
-    return True
+    return False
 
 
 if __name__ == '__main__':

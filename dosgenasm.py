@@ -5,7 +5,7 @@ import threading
 
 idalPath = "//usr//local//src//ida-pro-6.4//idal"
 idcPath = "//usr//local//src//ida-pro-6.4//idc//analysis_fullname.idc"
-PATH = './/resource//vxheaven//class//virus.dos/'
+PATH = './/resource//vxheaven//class//virus.dos//normal/'
 # PATH = './/resource//vxheaven//class//test/'
 # PATH = '..//resource//vxheaven//vl//virus.win/'
 ThreadMax = 2
@@ -59,7 +59,7 @@ def traveseFile(path):
             if (cleanFile(filename, filepath)):
                 continue
 
-            filepath = filepath.replace(' ', '\ ').replace('(', '\(').replace(')', '\)')
+            filepath = filepath.replace(' ', '\ ').replace('(', '\(').replace(')', '\)').replace('&', '\&)')
             # print filepath
 
             genAsm(filepath)

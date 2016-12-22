@@ -2,7 +2,6 @@
 
 import magic
 import os
-import sys
 import shutil
 
 PATH = './/resource//vxheaven//vl//virus.dos/'
