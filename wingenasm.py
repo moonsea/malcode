@@ -1,83 +1,61 @@
 #! /usr/bin/python
 
 import os
-import threading
+import datetime
 
 # idal -c -A -S//usr//local//src//ida-pro-6.4//idc//analysis_fullname.idc inputfile
 idalPath = "//usr//local//src//ida-pro-6.4//idal"
 idcPath = "//usr//local//src//ida-pro-6.4//idc//analysis_fullname.idc"
-PATH = './/resource//vxheaven//class//virus.win//compress//compress/'
-# PATH = './/resource//vxheaven//class//test/'
-# PATH = '..//resource//vxheaven//vl//virus.win/'
-ThreadMax = 2
+# PATH = './/resource//vxheaven//class//virus.win//compress//compress/'
+# normalPath = "./resource/vxheaven/class/virus.win/normal/"
+unpackPath = "./resource/vxheaven/class/virus.win/compress/unpack/"
+logName = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
+logPath = "./log"
 
 
-class MyThread(threading.Thread):
-    """docstring for MyThread"""
-
-    def __init__(self, filename, filepath):
-        super(MyThread, self).__init__()
-        self.name = filename
-        self.filepath = filepath
-
-    def run(self):
-        print "Starting " + self.filename
-        genAsm(self.ilepath)
-        print "Exiting " + self.name
-
-
-def genAsm(filepath):
-    ExecStr = idalPath + " -c -A -S" + idcPath + " " + filepath
+def genAsm(filepath, total):
+    ExecStr = idalPath + " -c -A -S" + idcPath + " '" + filepath + "'"
     # print ExecStr
     os.system(ExecStr)
 
-
-def multiGenAsm(filepath):
-    count = threading.active_count()
-    print '[+]count:', count
-
-    # while (count >= ThreadMax):
-    #     count = threading.active_count()
-    #     print '[+]Threadcount:', count
-
-    my_thread = threading.Thread(target=genAsm, args=(filepath, ))
-    my_thread.start()
-    # my_thread.join()
-
-    if (count == ThreadMax):
-        my_thread.join()
+    return total + 1
 
 
-def traveseFile(path):
-    # thread1 = ''
-    # thread2 = ''
-
+def traveseFile(path, initClean=False):
     for parent, dirnames, filenames in os.walk(path):
 
+        if(initClean):
+            log('Cleaning', '', '[-]')
+
+            for filename in filenames:
+                filepath = os.path.join(parent, filename)
+
+                cleanFile(filename, filepath)
+
+            continue
+
+        log('Entering', parent)
+        # normal file
+        # log('origin', str(len(filenames)))
+        # unpack file
+        log('origin', str(countFile(parent, 'dump')))
+
+        total = 0
         for filename in filenames:
             filepath = os.path.join(parent, filename)
 
             if (cleanFile(filename, filepath)):
                 continue
 
-            filepath = filepath.replace(' ', '\ ').replace('(', '\(').replace(')', '\)')
-            # print filepath
+            log('asming', filename)
 
-            genAsm(filepath)
+            total = genAsm(filepath, total)
 
-            # multiGenAsm(filepath)
+        log('genasm', str(countFile(parent, 'asm')))
 
-            # my_thread = threading.Thread(target=genAsm, args=(filepath, ))
-            # my_thread.start()
 
-            # thread1 = MyThread(filename, filepath)
-            # thread2 = MyThread(2, "Thread-2", 2)
-            #
-            # thread1.start()
-            # thread2.start()
-            #
-            # thread1.join()
-            # thread2.join()
+def countFile(dirpath, suffix=''):
+    return len([x for x in os.listdir(dirpath) if (x.split('.')[-1] == suffix)])
 
 
 def cleanFile(filename, filepath):
@@ -87,14 +65,40 @@ def cleanFile(filename, filepath):
         print '[-] Clean ', filename
         return True
 
-    # if (filetype == 'dump'):
-    #     return False
+    # unpack file
+    if (filetype == 'dump'):
+        return False
+    return True
 
     # return False
-    return True
+
+
+def getNowTime():
+    return datetime.datetime.now().strftime('%m-%d-%H:%M:%S')
+
+
+def log(action, content, prefix='[+]', suffix='', subpath=''):
+    logDir = os.path.join(logPath, subpath)
+    if not os.path.exists(logDir):
+        try:
+            os.makedirs(logDir)
+        except:
+            print '[-] Mkdir error'
+
+    logpath = os.path.join(logDir, logName)
+
+    with open(logpath, 'a+') as logfile:
+        logfile.write(''.join([prefix, getNowTime(), ' ', action, ' ', content, suffix, '\n']))
 
 
 if __name__ == '__main__':
-    # print filetype('.//FirstClass//8f84a46017151d935c34878ad4c53293')
 
-    traveseFile(PATH)
+    log('Starting', '', '********', '********')
+
+    # normal file
+    # traveseFile(normalPath, True)
+    # traveseFile(normalPath)
+
+    # unpack file
+    traveseFile(unpackPath, True)
+    traveseFile(unpackPath)

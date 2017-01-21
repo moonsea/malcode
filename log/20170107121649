@@ -1,0 +1,72 @@
+********2017-01-07 12:16:49 Starting ********
+[-]2017-01-07 12:16:49 Cleaning 
+[-]2017-01-07 12:16:49 Cleaning 
+[-]2017-01-07 12:16:49 Cleaning 
+[-]2017-01-07 12:16:49 Cleaning 
+[-]2017-01-07 12:16:49 Cleaning 
+[+]2017-01-07 12:16:49 Entering ./resource/vxheaven/class/virus.win/normal/test
+[+]2017-01-07 12:16:49 origin 0
+[+]2017-01-07 12:16:49 genasm 0
+[+]2017-01-07 12:16:49 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (DLL) (console) Intel 80386 (stripped to external PDB), for MS Windows
+[+]2017-01-07 12:16:49 origin 1
+[+]2017-01-07 12:16:49 asming Virus.Win32.Kriz.3740
+[+]2017-01-07 12:16:55 genasm 1
+[+]2017-01-07 12:16:55 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (DLL) (native) Intel 80386 (stripped to external PDB), for MS Windows
+[+]2017-01-07 12:16:55 origin 1
+[+]2017-01-07 12:16:55 asming Virus.Win32.Chatter
+[+]2017-01-07 12:16:58 genasm 1
+[+]2017-01-07 12:16:58 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (DLL) (GUI) Intel 80386 (stripped to external PDB), for MS Windows
+[+]2017-01-07 12:16:58 origin 1
+[+]2017-01-07 12:16:58 asming Virus.Win32.Tinit.b
+[+]2017-01-07 12:17:06 genasm 1
+[+]2017-01-07 12:17:06 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (DLL) (GUI) Intel 80386, for MS Windows
+[+]2017-01-07 12:17:06 origin 48
+[+]2017-01-07 12:17:06 asming Virus.Win32.Kriz.3863
+[+]2017-01-07 12:17:11 asming Virus.Win32.Sality.b
+[+]2017-01-07 12:17:13 asming Virus.Win32.Nsag.b
+[+]2017-01-07 12:17:22 asming Virus.Win32.Xorer.ab
+[+]2017-01-07 12:17:25 asming Virus.Win32.Xorer.bu
+[+]2017-01-07 12:17:29 asming Virus.Win32.Xorer.cd
+[+]2017-01-07 12:17:32 asming Virus.Win32.Xorer.ba
+[+]2017-01-07 12:17:36 asming Virus.Win32.Xorer.dd
+[+]2017-01-07 12:17:39 asming Virus.Win32.Trats.e
+[+]2017-01-07 12:17:42 asming Virus.Win9x.Vlades.30208.a
+[+]2017-01-07 12:17:44 asming Virus.Win32.Xorer.bp
+[+]2017-01-07 12:17:48 asming Virus.Win32.Kriz.3660
+[+]2017-01-07 12:17:53 asming Virus.Win32.Yourde
+[+]2017-01-07 12:17:56 asming Virus.Win32.Xorer.ag
+[+]2017-01-07 12:18:00 asming Virus.Win9x.ZHymn.a
+[+]2017-01-07 12:18:02 asming Virus.Win32.Xorer.t
+[+]2017-01-07 12:18:05 asming Virus.Win32.Agent.z
+[+]2017-01-07 12:18:09 asming Virus.Win32.Tiniresu.a
+[+]2017-01-07 12:18:12 asming Virus.Win32.Downloader.bl
+[+]2017-01-07 12:18:14 asming Virus.Win32.Xorer.cb
+[+]2017-01-07 12:18:18 asming Virus.Win32.Xorer.bn
+[+]2017-01-07 12:18:21 asming Virus.Win32.Dahorse
+[+]2017-01-07 12:18:24 asming Virus.Win32.Downloader.b
+[+]2017-01-07 12:18:26 asming Virus.Win32.Xorer.ao
+[+]2017-01-07 12:18:29 asming Virus.Win32.BHO.d
+[+]2017-01-07 12:18:37 asming Virus.Win32.Goblin.gen
+[+]2017-01-07 12:18:45 asming Virus.Win32.Xorer.az
+[+]2017-01-07 12:18:49 asming Virus.Win9x.Vlades.30208.b
+[+]2017-01-07 12:18:51 asming Virus.Win32.Xorer.bt
+[+]2017-01-07 12:18:55 asming Virus.Win32.Xorer.bc
+[+]2017-01-07 12:18:58 asming Virus.Win32.BHO.b
+[+]2017-01-07 12:19:06 asming Virus.Win32.BHO.e
+[+]2017-01-07 12:19:13 asming Virus.Win32.Sality.t
+[+]2017-01-07 12:19:15 asming Virus.Win32.Delf.ap
+[+]2017-01-07 12:19:18 asming Virus.Win32.Delf.al
+[+]2017-01-07 12:19:21 asming Virus.Win32.Induc.a
+[+]2017-01-07 12:19:39 asming Virus.Win32.Sality.n
+[+]2017-01-07 12:19:41 asming Virus.Win32.Highway.a
+[+]2017-01-07 12:19:43 asming Virus.Win32.Agent.bu
+[+]2017-01-07 12:19:45 asming Virus.Win32.Xorer.bb
+[+]2017-01-07 12:19:45 asming Virus.Win32.Delf.bh
+[+]2017-01-07 12:19:45 asming Virus.Win32.Megin.a
+[+]2017-01-07 12:19:45 asming Virus.Win32.Kriz.4050
+[+]2017-01-07 12:19:45 asming Virus.Win32.Bacalid.a
+[+]2017-01-07 12:19:46 asming Virus.Win32.Nsag.a
+[+]2017-01-07 12:19:46 asming Virus.Win32.Xorer.am
+[+]2017-01-07 12:19:46 asming Virus.Win32.Xorer.cv
+[+]2017-01-07 12:19:46 asming Virus.Win32.Xorer.ca
+[+]2017-01-07 12:19:46 genasm 48

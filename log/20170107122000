@@ -1,0 +1,15 @@
+********01-07-12:20:00 Starting ********
+[-]01-07-12:20:00 Cleaning 
+[-]01-07-12:20:00 Cleaning 
+[-]01-07-12:20:00 Cleaning 
+[+]01-07-12:20:00 Entering ./resource/vxheaven/class/virus.win/normal/test
+[+]01-07-12:20:00 origin 0
+[+]01-07-12:20:00 genasm 0
+[+]01-07-12:20:00 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (DLL) (console) Intel 80386 (stripped to external PDB), for MS Windows
+[+]01-07-12:20:00 origin 1
+[+]01-07-12:20:00 asming Virus.Win32.Kriz.3740
+[+]01-07-12:20:06 genasm 1
+[+]01-07-12:20:06 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (DLL) (native) Intel 80386 (stripped to external PDB), for MS Windows
+[+]01-07-12:20:06 origin 1
+[+]01-07-12:20:06 asming Virus.Win32.Chatter
+[+]01-07-12:20:09 genasm 1

@@ -1,0 +1,26 @@
+********01-07-15:52:31 Starting ********
+[-]01-07-15:52:31 Cleaning 
+[-]01-07-15:52:31 Cleaning 
+[-]01-07-15:52:31 Cleaning 
+[-]01-07-15:52:31 Cleaning 
+[-]01-07-15:52:31 Cleaning 
+[+]01-07-15:52:31 Entering ./resource/vxheaven/class/virus.win/normal/test
+[+]01-07-15:52:31 origin 0
+[+]01-07-15:52:31 genasm 0
+[+]01-07-15:52:31 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (GUI) Intel 80386, for MS Windows, AIN 2.x self-extracting archive
+[+]01-07-15:52:31 origin 1
+[+]01-07-15:52:31 asming Virus.Win32.HLLW.Maka
+[+]01-07-15:52:36 genasm 0
+[+]01-07-15:52:36 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (GUI) Intel 80386, for MS Windows, Nullsoft Installer self-extracting archive
+[+]01-07-15:52:36 origin 2
+[+]01-07-15:52:36 asming Virus.Win32.Winemmem.a
+[+]01-07-15:52:38 asming Virus.Win32.Saburex.a
+[+]01-07-15:52:41 genasm 0
+[+]01-07-15:52:41 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (Windows CE) ARM, for MS Windows
+[+]01-07-15:52:41 origin 1
+[+]01-07-15:52:41 asming Virus.WinCE.Duts.a
+[+]01-07-15:52:42 genasm 0
+[+]01-07-15:52:42 Entering ./resource/vxheaven/class/virus.win/normal/test/PE32 executable (GUI) Intel 80386, for MS Windows, WISE installer self-extracting archive
+[+]01-07-15:52:42 origin 1
+[+]01-07-15:52:42 asming Virus.Win32.Vampiro.7018
+[+]01-07-15:52:45 genasm 0

@@ -1,0 +1,16 @@
+********01-07-18:36:35 Starting ********
+[-]01-07-18:36:35 Cleaning 
+[-]01-07-18:36:35 Cleaning 
+[-]01-07-18:36:35 Cleaning 
+[+]01-07-18:36:35 Entering D:\malcode\20170107\virus.dos\normal\test\
+[+]01-07-18:36:35 origin 0
+[+]01-07-18:36:35 genasm 0
+[+]01-07-18:36:35 Entering D:\malcode\20170107\virus.dos\normal\test\PE32 executable (GUI) Intel 80386, for MS Windows
+[+]01-07-18:36:35 origin 2
+[+]01-07-18:36:35 asming Virus.DOS.Gippo.1030.a
+[+]01-07-18:36:36 asming Virus.DOS.Whale.c
+[+]01-07-18:36:36 genasm 0
+[+]01-07-18:36:36 Entering D:\malcode\20170107\virus.dos\normal\test\PE32 executable (native) Intel 80386, for MS Windows
+[+]01-07-18:36:36 origin 1
+[+]01-07-18:36:36 asming Virus.DOS.SillyC.128.c
+[+]01-07-18:36:37 genasm 0
