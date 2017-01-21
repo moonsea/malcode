@@ -91,6 +91,9 @@ ENV/
 # resource
 resource
 
+# log
+log
+
 # ida pro file
 *.asm
 *.idb
